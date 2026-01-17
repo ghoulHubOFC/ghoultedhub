@@ -695,4 +695,6 @@ local script = G2L["22"];
 end;
 task.spawn(C_22);
 
-return G2L["1"], require;
+local finalGui = G2L["1"]
+finalGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+return finalGui
