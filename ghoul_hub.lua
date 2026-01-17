@@ -695,6 +695,7 @@ local script = G2L["22"];
 end;
 task.spawn(C_22);
 
-local finalGui = G2L["1"]
-finalGui.Parent = game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-return finalGui
+local mainGui = G2L["1"] -- Tem que ser "1" porque é onde seu ScreenGui foi criado
+mainGui.Parent = game:GetService("CoreGui")
+print("Menu injetado!")
+return mainGui
